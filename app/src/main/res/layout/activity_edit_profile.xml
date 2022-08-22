@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fe3f3f">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorprimaryred"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+        <ImageView
+            android:id="@+id/editAccountBackPress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_symbol"/>
+        <TextView
+            android:id="@+id/myAccountToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_medium"
+            android:layout_gravity="center"
+            android:text="Edit Profile"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            />
+        <ImageView
+            android:id="@+id/myAccountImgSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/search_icon"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/editAccProfileImage"
+        android:layout_width="133.33dp"
+        android:layout_height="133.33dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/profile_icon"
+        app:civ_border_width="3dp"
+        app:civ_border_color="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        />
+    <EditText
+        android:id="@+id/txtEditProfileFirstName"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33.33dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="33.33dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
+        android:fontFamily="@font/gotham_medium"
+        android:drawableStart="@drawable/person_symbol"
+        android:drawablePadding="15dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editAccProfileImage"/>
+
+    <EditText
+        android:id="@+id/txtEditProfileLastName"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33.33dp"
+        android:layout_marginTop="13.33dp"
+        android:layout_marginEnd="33.33dp"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
+        android:drawableStart="@drawable/person_symbol"
+        android:drawablePadding="15dp"
+        android:fontFamily="@font/gotham_medium"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditProfileFirstName"/>
+
+    <EditText
+        android:id="@+id/txtEditProfileEmail"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33.33dp"
+        android:layout_marginTop="13.33dp"
+        android:layout_marginEnd="33.33dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:drawableStart="@drawable/email_symbol"
+        android:drawablePadding="15dp"
+        android:fontFamily="@font/gotham_medium"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditProfileLastName"/>
+
+    <EditText
+        android:id="@+id/txtEditProfilePhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33.33dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="33.33dp"
+        android:hint="Phone Number"
+        android:textColorHint="@color/white"
+        android:drawableStart="@drawable/phone_symbol"
+        android:drawablePadding="15dp"
+        android:inputType="number"
+        android:fontFamily="@font/gotham_medium"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditProfileEmail"/>
+
+    <EditText
+        android:id="@+id/txtEditProfileDob"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33.33dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="33.33dp"
+        android:hint="DOB"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
+        android:fontFamily="@font/gotham_medium"
+        android:drawableStart="@drawable/cake_symbol"
+        android:drawablePadding="15dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditProfilePhoneNumber"/>
+
+    <Button
+        android:id="@+id/btnEditProfileSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33.33dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="33.33dp"
+        android:background="#ffffff"
+        android:text="SUBMIT"
+        android:fontFamily="@font/gotham_bold"
+        android:textColor="#e91c1a"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditProfileDob" />
+</androidx.constraintlayout.widget.ConstraintLayout>
